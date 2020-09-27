@@ -22,7 +22,7 @@ namespace Covid_19.DAL
                 {
                     Time = DateTime.Parse(row["Time"].ToString()),
                     User = row["User"].ToString(),
-                    Temperature = float.Parse(row["Temperature"].ToString()),
+                    Temperature = Math.Round(float.Parse(row["Temperature"].ToString()),1),
                     Oximeter = int.Parse(row["Oximeter"].ToString()),
                     Heartrate = int.Parse(row["Heartrate"].ToString())
                 });
